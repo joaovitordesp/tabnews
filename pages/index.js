@@ -1,5 +1,5 @@
 function Home(){
-   return <h1>Continuo te amando minha gatinha</h1>
+   return <h1>Se você olhou de novo esse link, dá um sorrisinho dá?</h1>
 }
 
 
