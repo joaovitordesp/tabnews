@@ -4,7 +4,7 @@
   "description": "Criação do clone do tabnews para fins educacionas",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev"
   },
   "repository": {
     "type": "git",
@@ -12,10 +12,14 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/joaovitordesp/tabnews/issues"
   },
-  "homepage": "https://github.com/joaovitordesp/tabnews#readme"
+  "homepage": "https://github.com/joaovitordesp/tabnews#readme",
+  "dependencies": {
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
