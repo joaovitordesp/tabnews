@@ -4,7 +4,7 @@
   "description": "Criação do clone do tabnews para fins educacionas",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run service:up && next dev",
+    "dev": "npm run service:up && npm run wait-for-postgres && npm run migrate:up && next dev",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",
@@ -14,7 +14,8 @@
     "service:stop": "docker compose -f infra/compose.yaml stop",
     "migrate:create": "node-pg-migrate -m infra/migrations create",
     "migrate:up": "node-pg-migrate -m infra/migrations --envPath .env.development up",
-    "migrate:down": "node-pg-migrate -m infra/migrations --envPath .env.development down"
+    "migrate:down": "node-pg-migrate -m infra/migrations --envPath .env.development down",
+    "wait-for-postgres": "node infra/scripts/wait-for-postgres.js"
   },
   "repository": {
     "type": "git",
